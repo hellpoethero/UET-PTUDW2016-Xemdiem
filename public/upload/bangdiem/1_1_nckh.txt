@@ -1,0 +1,55 @@
+Mục tiêu: NCKH
+
+- Thu thập bài viết về bán hàng, số lượng lớn (gán nhãn 4000 bài).
+- Bao phủ tất cả các thể loại hàng cần bán.
+- Đánh giá độ tin cậy của shop.
+- Tìm shop qua facebook search -> lấy thông tin các shop bán hàng.
+- Tìm shop của VN, quét các page mới trong 1 tuần.
+- Tìm post của page, phân loại post bán hàng.
+- Xây dựng từ điển: tập các từ khóa về mặt hàng.
+- Xu hướng bán hàng.
+- Index các shop, xếp hạng uy tín, bản đồ, đánh chỉ mục hàng hóa từng shop.
+- Xây dựng hệ thống tìm kiếm
+- Tập trung vào sản phẩm nào đó
+- Phân lớp chuẩn
+- Tính ứng dụng cao
+
+Chức năng:
+- Chọn tên người gán nhãn (kiểm soát xem ai gán nhãn)
+- Gán nhãn:
+	+ Quản lý page: duyệt page
+	+ Post
+	+ Comment
+	+ Xây dựng từ điển
+
+- select tập post:
+	+ trái: bảng danh sách
+	+ Phải: bảng nội dung
+	+ ấn nút gán nhãn
+	+ Hiển thị tên người gán nhãn
+
+- CSDL:	
+	+ Đã gán nhãn
+	+ Hệ thống hiện tại
+
+	+ Bảng ghi lại thời gian truy cập người dùng
+	+ 
+
+Ng log in -> chọn tên -> lấy 100 post để duyệt -> lưu -> session mới
+Nút post:
+enter: lưu
+4 nút: bán - không bán - chưa quyết định - xóa
+lên xuống
+
+comment: có khả năng mua - không có khả năng mua - spam - chưa quyết định
+
+Xây dựng từ điển:
+- xây dựng cây
+- xây từ khóa
+
+duyệt qua từng post và gõ tên sản phẩm
+
+- lấy dữ liệu từ smk -> annotate: id, nội dung, loại (page, comment)
+- người làm, thời gian cập nhật, session
+
+session table: tg, tên ng làm, session, id_sesion

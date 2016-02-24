@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/HocKyNamHocController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/LopMonHocController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/Http/Controllers/NamHocController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/hoc_ky_nam_hoc/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/mon_hoc/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/nam_hoc/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/welcome.blade.php" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
