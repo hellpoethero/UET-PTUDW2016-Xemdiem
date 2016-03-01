@@ -4,7 +4,7 @@
 /public/storage
 Homestead.yaml
 Homestead.json
-.env
+#.env
 =======
 vendor/
 node_modules/

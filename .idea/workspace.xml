@@ -2,45 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22716c72-214f-42ee-9bd2-fe7dcb44cac0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/myJS.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/lop_mon_hoc/show.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/nam_hoc/show.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/DiemController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/MonHocController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/SinhVienController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/lop_mon_hoc.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/mon_hoc.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/sinh_vien.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/sinh_vien_diem.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_02_18_032841_mon_hoc_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_02_18_032851_lop_mon_hoc_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_02_18_032911_sinh_vien_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_02_18_033001_sinh_vien_diem_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_02_18_061152_update.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/bangdiem/1_1_hamee.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/bangdiem/1_1_nckh.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/bangdiem/2_1_pass wifi UET.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/bangdiem/2_2_pass wifi UET.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/bangdiem/3_2_abc.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/bangdiem/3_2_pass wifi UET.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/bangdiem/pass wifi UET.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/diem/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/mon_hoc/index.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/sinh_vien/index.blade.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/HocKyNamHocController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HocKyNamHocController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LopMonHocController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LopMonHocController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/NamHocController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/NamHocController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_02_19_062230_hoc_ky_nam_hoc_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_02_19_062230_hoc_ky_nam_hoc_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/lop_mon_hoc/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/lop_mon_hoc/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/nam_hoc/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/nam_hoc/index.blade.php" />
     </list>
     <ignored path="xemdiem.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,11 +63,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/nam_hoc/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7055655">
+            <state vertical-scroll-proportion="-15.769231">
               <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5540309">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -190,7 +164,6 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/database/migrations/2016_02_24_181644_add_foreign_ky_bang_diem_file.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DiemController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MonHocController.php" />
@@ -222,6 +195,7 @@
         <option value="$PROJECT_DIR$/resources/views/nam_hoc/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/NamHocController.php" />
         <option value="$PROJECT_DIR$/resources/views/nam_hoc/show.blade.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -240,9 +214,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1358" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1040" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -270,6 +244,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -507,7 +482,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -573,11 +547,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="1358" y="-8" width="1040" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18303572" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" x="1756" y="58" width="243" height="612" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24550898" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" x="1756" y="58" width="243" height="612" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -723,13 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39273927">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.153846">
@@ -738,13 +705,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/jquery-2.2.0.min.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/jquery-2.2.0.min.js">
@@ -985,8 +952,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/nam_hoc/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7055655">
+        <state vertical-scroll-proportion="-15.769231">
           <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5540309">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
           <folding />
         </state>
       </provider>
