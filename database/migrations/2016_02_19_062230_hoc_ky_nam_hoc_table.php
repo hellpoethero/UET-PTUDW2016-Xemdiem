@@ -17,6 +17,9 @@ class HocKyNamHocTable extends Migration
             $table->integer('hoc_ky_id')->unsigned();
             $table->integer('nam_hoc_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('hoc_ky_id')->references('id')->on('hoc_ky');
+            $table->foreign('nam_hoc_id')->references('id')->on('nam_hoc');
         });
     }
 

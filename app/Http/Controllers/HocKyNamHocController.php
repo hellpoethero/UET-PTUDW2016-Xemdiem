@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 
 class HocKyNamHocController extends Controller
 {
-    // Hiển tị danh sách học kỳ theo năm học
+    // Hiển thị danh sách học kỳ theo năm học
     function indexByNamHoc(Request $request, $nam_bat_dau) {
         $hoc_ky_nam_hoc =
             hoc_ky_nam_hoc::

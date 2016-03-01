@@ -17,6 +17,7 @@ app/storage/
 bootstrap/cache/
 storage/
 .env.*.php
+/storage
 .env.php
 .env.example
 >>>>>>> 4c5e977e02875bedb29419377aa4db60c745299a

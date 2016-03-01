@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/','DiemController@index');
+Route::get('/','LopMonHocController@index');
 
 /*
 |--------------------------------------------------------------------------
@@ -34,23 +34,17 @@ Route::group(['middleware' => 'web'], function () {
         Route::post('/', 'NamHocController@store');
         Route::delete('/{id}', 'NamHocController@destroy');
         Route::get('/{id}', 'NamHocController@show');
-        Route::post('test', 'NamHocController@test');
-    });
-
-    Route::group(['prefix' => 'monhoc'], function() {
-        Route::get('/', 'MonHocController@index');
-        Route::post('/', 'MonHocController@store');
     });
 
     Route::group(['prefix'=>'lopmonhoc'], function() {
         Route::get('/', 'LopMonHocController@index');
-        Route::post('/', 'LopMonHocController@store');
+        Route::post('/', 'LopMonHocController@addLHMFile');
+        Route::get('/{id}', 'LopMonHocController@show');
+        Route::post('/{id}/upload', 'LopMonHocController@addLHMDiem');
+        Route::post('/{id}', 'LopMonHocController@edit');
     });
+});
 
-    Route::group(['prefix'=>'diem'], function() {
-        Route::get('/', 'DiemController@index');
-        Route::post('/', 'DiemController@store');
-    });
-
-    Route::get('/sinhvien', 'SinhVienController@index');
+Route::group(['prefix'=>'get'], function() {
+    Route::get('/', 'getDataController@getData');
 });

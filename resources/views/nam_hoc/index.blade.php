@@ -25,9 +25,9 @@
                     <table class="table table-hover" style="text-align: center">
                         <thead>
                         <tr style="background-color: #337ab7;color: white; font-size: 125%;">
-                            <th class="col-md-2" style="text-align: center;">#</th>
+                            <th class="col-md-1" style="text-align: center;">#</th>
                             <th class="col-md-6" style="text-align: center;">Năm học</th>
-                            <th class="col-md-2" style="text-align: center;"></th>
+                            <th class="col-md-1" style="text-align: center;"></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -56,25 +56,5 @@
             </div>
         </div>
     </div>
-
-    <style>
-        .yearRow .deleteButton {
-            display: none;
-        }
-        .yearRow:hover .deleteButton {
-            display: block;
-        }
-    </style>
-
-    {{--<script>--}}
-
-        {{--$('#form').submit(function(e) {--}}
-            {{--var $data = $(this).serialize();--}}
-            {{--alert($(this));--}}
-            {{--$.post("{{ url('/namhoc/create')}}",$data,function(msg) {--}}
-                {{--alert('Thành công');--}}
-            {{--});--}}
-        {{--});--}}
-    {{--</script>--}}
 @endsection
 

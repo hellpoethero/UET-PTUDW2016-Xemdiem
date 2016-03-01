@@ -10,48 +10,51 @@ use Illuminate\Http\Request;
 
 class NamHocController extends Controller
 {
-    //
+    //hiển thị danh sách năm học
     function index() {
         $nam_hoc_list = nam_hoc::select('nam_bat_dau', 'nam_ket_thuc')->get();
         return view('nam_hoc.index')->with('data', $nam_hoc_list);
     }
 
-    function show(Request $request, $id) {
-        $hoc_ky_by_year = new HocKyNamHocController();
-        return view('nam_hoc.show')->with('data', $hoc_ky_by_year->indexByNamHoc($request,$id));
+    //hiển thị một năm học
+    function show(Request $request, $nam_bat_dau) {
+        $this->data['nam_hoc'] = nam_hoc::select('nam_bat_dau', 'nam_ket_thuc')->where('nam_bat_dau',$nam_bat_dau)->get()[0];
+        $this->data['hoc_ky_nam_hoc'] = hoc_ky_nam_hoc::
+            join('hoc_ky', 'hoc_ky.id','=', 'hoc_ky_nam_hoc.hoc_ky_id')
+            ->join('nam_hoc', 'nam_hoc.id','=','hoc_ky_nam_hoc.nam_hoc_id')
+            ->select('hoc_ky_nam_hoc.id','hoc_ky.name')
+            ->where('nam_hoc.nam_bat_dau', $nam_bat_dau)->get();
+        return view('nam_hoc.show')->with('data', $this->data);
     }
 
     function store(Request $request) {
+        $location = "namhoc/";
         if ($request->nam_bat_dau != null and is_numeric($request->nam_bat_dau) ) {
             $nam_hoc = new nam_hoc();
             $nam_hoc->nam_bat_dau = $request->nam_bat_dau;
             $nam_hoc->nam_ket_thuc = $request->nam_bat_dau + 1;
-            if (nam_hoc::where('nam_bat_dau', '=', $nam_hoc->nam_bat_dau)->exists()) {
 
+            //Kiểm tra xem dữ liệu có bị trùng không
+            if (!nam_hoc::where('nam_bat_dau', '=', $nam_hoc->nam_bat_dau)->exists()) {
+
+                //dữ liệu hợp lệ
+                if ($nam_hoc->save()) {
+                    // Tự động thêm học kỳ sau khi thêm năm học thành công
+                    $hoc_ky_nam_hoc = new HocKyNamHocController();
+                    $hoc_ky_nam_hoc->create($request,$nam_hoc->id);
+
+                    $this->alert($location, "Thêm năm học thành công!");
+                } else {
+                    //Có lỗi hệ thống xảy ra
+                    $this->alert($location, "Có lỗi xảy ra!");
+                }
+            } else {
                 //lỗi trùng dữ liệu trong database
-                echo '<script language="javascript">';
-                echo 'window.location="/namhoc";';
-                echo 'alert("Năm học đã tồn tại")';
-                echo '</script>';
-            }
-
-            //dữ liệu hợp lệ
-            if ($nam_hoc->save()) {
-                // Tự động thêm học kỳ sau khi thêm năm học thành công
-                $hoc_ky_nam_hoc = new HocKyNamHocController();
-                $hoc_ky_nam_hoc->create($request,$nam_hoc->id);
-
-                echo '<script language="javascript">';
-                echo 'window.location="/namhoc";';
-                echo 'alert("Thêm năm học thành công")';
-                echo '</script>';
+                $this->alert($location, "Năm học đã tồn tại!");
             }
         }
         //lỗi dữ liệu không hợp lệ
-        echo '<script language="javascript">';
-        echo 'window.location="/namhoc";';
-        echo 'alert("Thông tin không hợp lệ")';
-        echo '</script>';
+        $this->alert($location, "Thông tin không hợp lệ!");
     }
 
     function destroy(Request $request, $nam_bat_dau) {
@@ -62,5 +65,12 @@ class NamHocController extends Controller
             nam_hoc::where('nam_bat_dau',$nam_bat_dau)->delete();
         }
         return redirect('/namhoc');
+    }
+
+    function alert($location, $message) {
+        echo '<script language="javascript">';
+        echo 'window.location="/'.$location.'";';
+        echo 'alert("'.$message.'");';
+        echo '</script>';
     }
 }
