@@ -19,26 +19,25 @@ class LopMonHocController extends Controller
     //
     function index() {
         $this->data['hoc_ky_nam_hoc'] = hoc_ky_nam_hoc::
-            join('hoc_ky','hoc_ky.id','=','hoc_ky_nam_hoc.hoc_ky_id')
-            ->join('nam_hoc','nam_hoc.id','=','hoc_ky_nam_hoc.nam_hoc_id')
-            ->select('hoc_ky_nam_hoc.id','hoc_ky.name','nam_hoc.nam_bat_dau','nam_hoc.nam_ket_thuc')->get();
+            join('nam_hoc','nam_hoc.id','=','hoc_ky_nam_hoc.nam_hoc_id')
+            ->select('hoc_ky_nam_hoc.id','hoc_ky_nam_hoc.name','nam_hoc.nam_bat_dau','nam_hoc.nam_ket_thuc','hoc_ky_nam_hoc.bo_sung')
+            ->where('nam_hoc.active',true)
+            ->get();
         return view('lop_mon_hoc.index')->with('data', $this->data);
     }
 
     function show(Request $request, $id) {
         $this->data['id'] = $id;
         $this->data['hoc_ky_nam_hoc'] = hoc_ky_nam_hoc::
-        join('hoc_ky','hoc_ky.id','=','hoc_ky_nam_hoc.hoc_ky_id')
-            ->join('nam_hoc','nam_hoc.id','=','hoc_ky_nam_hoc.nam_hoc_id')
+            join('nam_hoc','nam_hoc.id','=','hoc_ky_nam_hoc.nam_hoc_id')
             ->join('lop_mon_hoc', 'lop_mon_hoc.hoc_ky_nam_hoc_id', '=', 'hoc_ky_nam_hoc.id')
             ->select(DB::raw('concat(hoc_ky.name," ",nam_hoc.nam_bat_dau," - ",nam_hoc.nam_ket_thuc)'))
             ->get();
 
         $this->data['lop_mon_hoc'] = lop_mon_hoc::
-        select('lop_mon_hoc.name','lop_mon_hoc.id_name','lop_mon_hoc.so_thu_tu',
-            DB::raw('concat(hoc_ky.name," ",nam_hoc.nam_bat_dau," - ",nam_hoc.nam_ket_thuc) as hoc_ky_nam_hoc'))
+            select('lop_mon_hoc.name','lop_mon_hoc.id_name','lop_mon_hoc.so_thu_tu',
+            DB::raw('concat(hoc_ky_nam_hoc.name," ",nam_hoc.nam_bat_dau," - ",nam_hoc.nam_ket_thuc) as hoc_ky_nam_hoc'))
             ->join('hoc_ky_nam_hoc', 'lop_mon_hoc.hoc_ky_nam_hoc_id','=','hoc_ky_nam_hoc.id')
-            ->join('hoc_ky','hoc_ky.id','=','hoc_ky_nam_hoc.hoc_ky_id')
             ->join('nam_hoc','nam_hoc.id','=','hoc_ky_nam_hoc.nam_hoc_id')
             ->where('lop_mon_hoc.id',$id)->get()[0];
 
@@ -151,5 +150,16 @@ class LopMonHocController extends Controller
         echo 'window.location="/'.$location.'";';
         echo 'alert("'.$message.'");';
         echo '</script>';
+    }
+
+    function destroyByHocKy($hoc_ky) {
+        foreach (lop_mon_hoc::select('id')->where('hoc_ky_nam_hoc_id',$hoc_ky) as $lop_mon_hoc) {
+            $this->destroy($lop_mon_hoc['id']);
+        }
+    }
+
+    function destroy($id) {
+        bang_diem_file::where('lop_mon_hoc_id', $id)->delete();
+        lop_mon_hoc::where('hoc_ky_nam_hoc_id',$id)->delete();
     }
 }

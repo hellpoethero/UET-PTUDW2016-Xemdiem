@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class HocKyTable extends Migration
+class UserRoleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,12 @@ class HocKyTable extends Migration
      */
     public function up()
     {
-        Schema::create('hoc_ky', function (Blueprint $table) {
+        Schema::create('user_role', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('role_name');
+            $table->boolean('edit_nam_hoc');
+            $table->boolean('edit_lop_mon_hoc');
+            $table->boolean('edit_bang_diem');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class HocKyTable extends Migration
      */
     public function down()
     {
-        Schema::drop('hoc_ky_nam_hoc');
+        Schema::drop('user_role');
     }
 }

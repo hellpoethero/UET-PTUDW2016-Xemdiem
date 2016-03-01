@@ -14,11 +14,10 @@ class HocKyNamHocTable extends Migration
     {
         Schema::create('hoc_ky_nam_hoc', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('hoc_ky_id')->unsigned();
+            $table->string('name');
             $table->integer('nam_hoc_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('hoc_ky_id')->references('id')->on('hoc_ky');
             $table->foreign('nam_hoc_id')->references('id')->on('nam_hoc');
         });
     }

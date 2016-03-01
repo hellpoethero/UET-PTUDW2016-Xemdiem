@@ -14,8 +14,9 @@ class NamHocTable extends Migration
     {
         Schema::create('nam_hoc', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('nam_bat_dau'); //nam bat dau cua nam hoc
-            $table->integer('nam_ket_thuc'); //nam ket thuc cua nam hoc
+            $table->integer('nam_bat_dau')->unique(); //nam bat dau cua nam hoc
+            $table->integer('nam_ket_thuc')->unique(); //nam ket thuc cua nam hoc
+            $table->boolean('active'); //nam hoc co con hoat dong hay khong
             $table->timestamps();
         });
     }

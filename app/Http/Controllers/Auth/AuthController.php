@@ -52,6 +52,7 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
+            'user_role_id' => 'required'
         ]);
     }
 
@@ -63,10 +64,17 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+//        $user = new User();
+//        $user['name'] = $data['name'];
+//        $user['email'] = $data['email'];
+//        $user['password'] = $data['password'];
+//        $user['user_role_id'] = $data['user_role'];
+//        $user->save();
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'user_role_id' => $data['user_role_id'],
         ]);
     }
 }

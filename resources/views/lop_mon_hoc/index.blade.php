@@ -54,16 +54,15 @@
                                 <input id="id_name_filter" class="col-md-12 form-control" type="text" oninput="filterInput()">
                             </td>
                             <td>
-                                <div class="col-md-7">
+                                <div class="col-md-6">
                                     <input id="name_filter" class="form-control" type="text" oninput="filterInput()">
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-6">
                                     <select class="form-control" id="hoc_ky_nam_hoc_filer" onchange="filterHocKy()" required>
                                         <option value="">Chọn học kỳ</option>
                                         @foreach($data['hoc_ky_nam_hoc'] as $hoc_ky_nam_hoc)
                                             <option value="{{$hoc_ky_nam_hoc['id']}}">
-                                                {{$hoc_ky_nam_hoc['name']}} {{$hoc_ky_nam_hoc['nam_bat_dau']}} -
-                                                {{$hoc_ky_nam_hoc['nam_ket_thuc']}}
+                                                {{$hoc_ky_nam_hoc['name']}} {{$hoc_ky_nam_hoc['nam_bat_dau']}}-{{$hoc_ky_nam_hoc['nam_ket_thuc']}} {{$hoc_ky_nam_hoc['bo_sung']}}
                                             </option>
                                         @endforeach
                                     </select>

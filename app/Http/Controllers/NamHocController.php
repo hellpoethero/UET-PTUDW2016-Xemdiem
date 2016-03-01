@@ -12,17 +12,19 @@ class NamHocController extends Controller
 {
     //hiển thị danh sách năm học
     function index() {
-        $nam_hoc_list = nam_hoc::select('nam_bat_dau', 'nam_ket_thuc')->get();
+        $nam_hoc_list = nam_hoc::select('id', 'nam_bat_dau', 'nam_ket_thuc')->get();
         return view('nam_hoc.index')->with('data', $nam_hoc_list);
     }
 
     //hiển thị một năm học
-    function show(Request $request, $nam_bat_dau) {
-        $this->data['nam_hoc'] = nam_hoc::select('nam_bat_dau', 'nam_ket_thuc')->where('nam_bat_dau',$nam_bat_dau)->get()[0];
+    function show($nam_bat_dau) {
+        $this->data['nam_hoc'] = nam_hoc::
+            select('nam_bat_dau', 'nam_ket_thuc')
+            ->where('nam_bat_dau',$nam_bat_dau)
+            ->get()[0];
         $this->data['hoc_ky_nam_hoc'] = hoc_ky_nam_hoc::
-            join('hoc_ky', 'hoc_ky.id','=', 'hoc_ky_nam_hoc.hoc_ky_id')
-            ->join('nam_hoc', 'nam_hoc.id','=','hoc_ky_nam_hoc.nam_hoc_id')
-            ->select('hoc_ky_nam_hoc.id','hoc_ky.name')
+            join('nam_hoc', 'nam_hoc.id','=','hoc_ky_nam_hoc.nam_hoc_id')
+            ->select('hoc_ky_nam_hoc.id','hoc_ky_nam_hoc.name','hoc_ky_nam_hoc.bo_sung')
             ->where('nam_hoc.nam_bat_dau', $nam_bat_dau)->get();
         return view('nam_hoc.show')->with('data', $this->data);
     }
@@ -33,6 +35,7 @@ class NamHocController extends Controller
             $nam_hoc = new nam_hoc();
             $nam_hoc->nam_bat_dau = $request->nam_bat_dau;
             $nam_hoc->nam_ket_thuc = $request->nam_bat_dau + 1;
+            $nam_hoc->active = true;
 
             //Kiểm tra xem dữ liệu có bị trùng không
             if (!nam_hoc::where('nam_bat_dau', '=', $nam_hoc->nam_bat_dau)->exists()) {
@@ -41,7 +44,7 @@ class NamHocController extends Controller
                 if ($nam_hoc->save()) {
                     // Tự động thêm học kỳ sau khi thêm năm học thành công
                     $hoc_ky_nam_hoc = new HocKyNamHocController();
-                    $hoc_ky_nam_hoc->create($request,$nam_hoc->id);
+                    $hoc_ky_nam_hoc->createByNamHoc($nam_hoc->id);
 
                     $this->alert($location, "Thêm năm học thành công!");
                 } else {
@@ -57,11 +60,12 @@ class NamHocController extends Controller
         $this->alert($location, "Thông tin không hợp lệ!");
     }
 
-    function destroy(Request $request, $nam_bat_dau) {
+    function destroy($nam_bat_dau) {
         $nam_hoc = nam_hoc::where('nam_bat_dau',$nam_bat_dau)->get();
         if ($nam_hoc != null) {
-            $id = nam_hoc::select('id')->where('nam_bat_dau',$nam_bat_dau)->get();
-            hoc_ky_nam_hoc::where('nam_hoc_id', $id[0]['id'])->delete();
+            $id = nam_hoc::select('id')->where('nam_bat_dau',$nam_bat_dau)->get()[0]['id'];
+            $hoc_ky_nam_hoc = new HocKyNamHocController();
+            $hoc_ky_nam_hoc->destroyByNamHoc($id);
             nam_hoc::where('nam_bat_dau',$nam_bat_dau)->delete();
         }
         return redirect('/namhoc');

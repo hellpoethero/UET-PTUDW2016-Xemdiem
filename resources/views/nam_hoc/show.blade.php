@@ -26,7 +26,8 @@
                         <thead>
                         <tr style="background-color: #337ab7;color: white; font-size: 125%;">
                             <th class="col-md-1" style="text-align: center;">#</th>
-                            <th class="col-md-6" style="text-align: center;">Học kỳ</th>
+                            <th class="col-md-3" style="text-align: center;">Học kỳ</th>
+                            <th class="col-md-3" style="text-align: center;">Ghi chú</th>
                             <th class="col-md-1" style="text-align: center;"></th>
                         </tr>
                         </thead>
@@ -39,12 +40,15 @@
                                     {{$hoc_ky_nam_hoc['name']}}
                                 </td>
                                 <td>
+                                    {{$hoc_ky_nam_hoc['bo_sung']}}
+                                </td>
+                                <td>
                                     <div class="deleteButton">
                                         <form action="/hockynamhoc/{{$hoc_ky_nam_hoc['id']}}" method="POST">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
-                                            <button><i class="fa fa-trash"></i></button>
                                         </form>
+                                        <button><i class="fa fa-trash"></i></button>
                                     </div>
                                 </td>
                             </tr>

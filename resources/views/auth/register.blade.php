@@ -66,6 +66,16 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{$errors->has('user_role') ? 'has-error' : ''}}">
+                            <label class="col-md-4 control-label">Vai trò</label>
+                            <div class="col-md-6">
+                                <select class="form-control" name="user_role_id">
+                                    <option value="">Chọn vai trò</option>
+                                    <option value=1>Admin</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">

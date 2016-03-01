@@ -36,15 +36,17 @@
                             <tr class="yearRow">
                                 <td>{{$count}}</td>
                                 <td>
+                                    <a href="/namhoc/{{$nam_hoc['nam_bat_dau']}}">
                                     {{$nam_hoc['nam_bat_dau']}} - {{$nam_hoc['nam_ket_thuc']}}
+                                    </a>
                                 </td>
                                 <td>
                                     <div class="deleteButton">
                                         <form action="/namhoc/{{$nam_hoc['nam_bat_dau']}}" method="POST">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
-                                            <button><i class="fa fa-trash"></i></button>
                                         </form>
+                                        <button><i class="fa fa-trash"></i></button>
                                     </div>
                                 </td>
                             </tr>
