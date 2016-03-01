@@ -26,7 +26,8 @@
                         <thead>
                         <tr style="background-color: #337ab7;color: white; font-size: 125%;">
                             <th class="col-md-1" style="text-align: center;">#</th>
-                            <th class="col-md-6" style="text-align: center;">Năm học</th>
+                            <th class="col-md-3" style="text-align: center;">Năm học</th>
+                            <th class="col-md-3" style="text-align: center;">Hiển thị</th>
                             <th class="col-md-1" style="text-align: center;"></th>
                         </tr>
                         </thead>
@@ -39,6 +40,11 @@
                                     <a href="/namhoc/{{$nam_hoc['nam_bat_dau']}}">
                                     {{$nam_hoc['nam_bat_dau']}} - {{$nam_hoc['nam_ket_thuc']}}
                                     </a>
+                                </td>
+                                <td>
+                                    @if($nam_hoc['active'])
+                                        <i class="fa fa-check"></i>
+                                    @endif
                                 </td>
                                 <td>
                                     <div class="deleteButton">

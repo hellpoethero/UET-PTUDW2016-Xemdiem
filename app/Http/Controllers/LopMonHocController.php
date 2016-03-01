@@ -31,7 +31,7 @@ class LopMonHocController extends Controller
         $this->data['hoc_ky_nam_hoc'] = hoc_ky_nam_hoc::
             join('nam_hoc','nam_hoc.id','=','hoc_ky_nam_hoc.nam_hoc_id')
             ->join('lop_mon_hoc', 'lop_mon_hoc.hoc_ky_nam_hoc_id', '=', 'hoc_ky_nam_hoc.id')
-            ->select(DB::raw('concat(hoc_ky.name," ",nam_hoc.nam_bat_dau," - ",nam_hoc.nam_ket_thuc)'))
+            ->select(DB::raw('concat(hoc_ky_nam_hoc.name," ",nam_hoc.nam_bat_dau," - ",nam_hoc.nam_ket_thuc)'))
             ->get();
 
         $this->data['lop_mon_hoc'] = lop_mon_hoc::

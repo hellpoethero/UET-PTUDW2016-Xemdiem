@@ -12,7 +12,7 @@ class NamHocController extends Controller
 {
     //hiển thị danh sách năm học
     function index() {
-        $nam_hoc_list = nam_hoc::select('id', 'nam_bat_dau', 'nam_ket_thuc')->get();
+        $nam_hoc_list = nam_hoc::select('id', 'nam_bat_dau', 'nam_ket_thuc', 'active')->get();
         return view('nam_hoc.index')->with('data', $nam_hoc_list);
     }
 

@@ -51,7 +51,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <img src="{{ asset('UET.png') }}" height="48" style="padding: 8px 0px;">
+                <img src="{{ asset('UET.png') }}" height="48" style="padding: 8px 8px;">
 
                 <a class="navbar-brand" href="/">
                     Tra cứu điểm Đại học Công nghệ
@@ -102,5 +102,8 @@
             display: block;
         }
     </style>
+    <script>
+
+    </script>
 </body>
 </html>
