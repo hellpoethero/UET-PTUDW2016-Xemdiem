@@ -44,16 +44,26 @@
                                 </td>
                                 <td>
                                     <div class="deleteButton">
-                                        <form action="/hockynamhoc/{{$hoc_ky_nam_hoc['id']}}" method="POST">
+                                        <form id="deleteHocKy" action="/hocky/{{$hoc_ky_nam_hoc['id']}}" method="POST">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
+                                            <input hidden name="nam_hoc" value="{{$data['nam_hoc']['nam_bat_dau']}}">
+                                            <button type="button" onclick="deleteSubmit(this)"><i class="fa fa-trash"></i></button>
                                         </form>
-                                        <button><i class="fa fa-trash"></i></button>
                                     </div>
                                 </td>
                             </tr>
                             <?php $count++; ?>
                         @endforeach
+                        <tr>
+                            <form id="addHocKy" method="post" action="/hocky">
+                                {{csrf_field()}}
+                                <td><input hidden name="nam_hoc_id" value={{$data['nam_hoc']['id']}}></td>
+                                <td><input class="form-control" type="text" placeholder="Học kỳ" name="name"></td>
+                                <td><input class="form-control" type="text" placeholder="Thông tin bổ sung" name="bo_sung"></td>
+                            </form>
+                            <td><button class="btn btn-primary" onclick="addSubmit()">Thêm</button></td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -61,3 +71,12 @@
         </div>
     </div>
 @endsection
+
+<script>
+    function addSubmit() {
+        document.getElementById('addHocKy').submit();
+    }
+    function deleteSubmit(deleteButton) {
+        deleteButton.parentNode.submit();
+    }
+</script>

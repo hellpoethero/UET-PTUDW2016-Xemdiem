@@ -83,6 +83,8 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/management') }}"><i class="fa fa-btn fa-cog"></i>Quản lý</a></li>
+                                <li><a href="{{ url('/user') }}"><i class="fa fa-btn fa-user"></i>Cá nhân</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>

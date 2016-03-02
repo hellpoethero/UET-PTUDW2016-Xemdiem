@@ -19,7 +19,7 @@ class NamHocController extends Controller
     //hiển thị một năm học
     function show($nam_bat_dau) {
         $this->data['nam_hoc'] = nam_hoc::
-            select('nam_bat_dau', 'nam_ket_thuc')
+            select('id','nam_bat_dau', 'nam_ket_thuc')
             ->where('nam_bat_dau',$nam_bat_dau)
             ->get()[0];
         $this->data['hoc_ky_nam_hoc'] = hoc_ky_nam_hoc::

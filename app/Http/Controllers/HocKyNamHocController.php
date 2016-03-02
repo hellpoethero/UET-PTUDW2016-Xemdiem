@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\hoc_ky_nam_hoc;
 use App\lop_mon_hoc;
+use App\nam_hoc;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -22,9 +23,10 @@ class HocKyNamHocController extends Controller
         return $hoc_ky_nam_hoc;
     }
 
-    function create(Request $request, $nam_hoc_id) {
-        $this->storeByNamHoc($nam_hoc_id, $request->name, $request->bo_sung);
-        return view('nam_hoc.show');
+    function create(Request $request) {
+        $this->store($request->nam_hoc_id, $request->name, $request->bo_sung);
+        $nam_hoc = nam_hoc::select('nam_bat_dau')->where('id', $request->nam_hoc_id)->get()[0];
+        return redirect("/namhoc/".$nam_hoc['nam_bat_dau']);
     }
 
     function store($nam_hoc_id, $name, $bo_sung) {
@@ -49,6 +51,10 @@ class HocKyNamHocController extends Controller
         }
     }
 
+    function delete(Request $request, $id) {
+        $this->destroy($id);
+        return redirect('namhoc/'.$request->nam_hoc);
+    }
     function destroy($id) {
         $lop_mon_hoc = new LopMonHocController();
         $lop_mon_hoc->destroyByHocKy($id);

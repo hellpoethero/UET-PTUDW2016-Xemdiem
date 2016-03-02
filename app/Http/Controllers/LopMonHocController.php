@@ -50,7 +50,25 @@ class LopMonHocController extends Controller
     }
 
     function edit(Request $request, $id) {
-        echo $request;
+        $location = 'lopmonhoc/'.$id;
+        $rules = array(
+            'name' => 'required|string',
+            'id_name' => 'required|string',
+            'so_thu_tu' => 'integer',
+        );
+        $validator = Validator::make($request->all(), $rules);
+        if ($validator->fails()) {
+            $this->alert($location, "Thông tin chưa chính xác!");
+        } else {
+            if (!lop_mon_hoc::where('id_name',$request->id_name)
+                ->where('so_thu_tu', $request->so_thu_tu)->exists()) {
+                lop_mon_hoc::where('id',$id)
+                    ->update(['name' => $request->name, 'id_name' => $request->id_name, 'so_thu_tu' => $request->so_thu_tu]);
+                $this->alert($location, "Thay đổi thông tin thành công!");
+            } else {
+                $this->alert($location, "Lớp môn học đã tồn tại!");
+            }
+        }
     }
 
     function addLHMDiem(Request $request, $id) {

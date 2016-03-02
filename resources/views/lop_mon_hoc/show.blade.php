@@ -30,11 +30,11 @@
                     <input id="so_thu_tu" name="so_thu_tu" disabled type="text" class="form-control" value="{{$data['lop_mon_hoc']['so_thu_tu']}}" required>
                     <label style="font-size: 125%">Số thứ tự</label>
                     <input disabled type="text" class="form-control" value="{{$data['lop_mon_hoc']['hoc_ky_nam_hoc']}}">
+                    </br>
+                    <button type="button" class="btn btn-warning col-md-offset-0 col-md-3" id="editButton" onclick="changeButton()" value="edit"><i class="fa fa-pencil"></i> Sửa</button>
+                    <button type="submit" class="btn btn-success col-md-offset-6 col-md-3" style="display: none" id="submitButton"><i class="fa fa-check"></i> Xác nhận</button>
                 </form>
-                </br>
-                <button class="btn btn-warning col-md-offset-0 col-md-3" id="editButton" onclick="changeButton()" value="edit"><i class="fa fa-pencil"></i> Sửa</button>
-                <button class="btn btn-success col-md-offset-6 col-md-3" style="display: none" id="submitButton" onclick="document.getElementById('editForm').submit();"><i class="fa fa-check"></i> Xác nhận</button>
-            </div>
+                </div>
             <div class="col-md-6">
                 @if ($data['file'] != null)
                     <div style="text-align: center;">

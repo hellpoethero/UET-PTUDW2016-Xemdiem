@@ -43,6 +43,11 @@ Route::group(['middleware' => 'web'], function () {
         Route::post('/{id}/upload', 'LopMonHocController@addLHMDiem');
         Route::post('/{id}', 'LopMonHocController@edit');
     });
+
+    Route::group(['prefix'=>'hocky'], function() {
+        Route::post('/', 'HocKyNamHocController@create');
+        Route::delete('/{id}', 'HocKyNamHocController@delete');
+    });
 });
 
 Route::group(['prefix'=>'get'], function() {

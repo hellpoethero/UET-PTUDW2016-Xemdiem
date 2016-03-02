@@ -42,17 +42,15 @@
                                     </a>
                                 </td>
                                 <td>
-                                    @if($nam_hoc['active'])
-                                        <i class="fa fa-check"></i>
-                                    @endif
+                                    <input style="" type="checkbox" @if($nam_hoc['active']==1)checked @endif>
                                 </td>
                                 <td>
                                     <div class="deleteButton">
                                         <form action="/namhoc/{{$nam_hoc['nam_bat_dau']}}" method="POST">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
+                                            <button type="button" onclick="deleteSubmit(this)"><i class="fa fa-trash"></i></button>
                                         </form>
-                                        <button><i class="fa fa-trash"></i></button>
                                     </div>
                                 </td>
                             </tr>
@@ -66,3 +64,8 @@
     </div>
 @endsection
 
+<script>
+    function deleteSubmit(deleteButton) {
+        deleteButton.parentNode.submit();
+    }
+</script>
