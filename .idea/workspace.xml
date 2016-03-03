@@ -4,15 +4,6 @@
     <list default="true" id="22716c72-214f-42ee-9bd2-fe7dcb44cac0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/HocKyNamHocController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HocKyNamHocController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/LopMonHocController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/LopMonHocController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/NamHocController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/NamHocController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/lop_mon_hoc/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/lop_mon_hoc/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/nam_hoc/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/nam_hoc/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/nam_hoc/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/nam_hoc/show.blade.php" />
     </list>
     <ignored path="xemdiem.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,7 +35,7 @@
       <file leaf-file-name="bang_diem_file.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/bang_diem_file.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-5.8846154">
               <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="40" />
               <folding />
             </state>
@@ -54,7 +45,7 @@
       <file leaf-file-name="nam_hoc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/nam_hoc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -64,7 +55,7 @@
       <file leaf-file-name="LopMonHocController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LopMonHocController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.5">
+            <state vertical-scroll-proportion="0.0">
               <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
               <folding>
                 <element signature="e#40#63#0#PHP" expanded="true" />
@@ -76,8 +67,8 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/lop_mon_hoc/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.037702">
-              <caret line="34" column="130" selection-start-line="34" selection-start-column="130" selection-end-line="34" selection-end-column="130" />
+            <state vertical-scroll-proportion="1.518851">
+              <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -91,7 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/nam_hoc.php" />
         <option value="$PROJECT_DIR$/resources/views/nam_hoc/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/hoc_ky_nam_hoc/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/sinh_vien/index.blade.php" />
@@ -142,6 +132,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/HocKyNamHocController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LopMonHocController.php" />
         <option value="$PROJECT_DIR$/resources/views/lop_mon_hoc/show.blade.php" />
+        <option value="$USER_HOME$/Desktop/Untitled-1.html" />
       </list>
     </option>
   </component>
@@ -190,7 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -483,11 +473,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="E:/Hoc tap/NCKH/KT Lab/Social Network Mining/web" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Untitled-1.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -549,7 +540,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -594,13 +585,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/jquery.sticky.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -668,7 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -725,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.692307">
           <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -761,7 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="38.0">
           <caret line="1457" column="20" selection-start-line="1457" selection-start-column="20" selection-end-line="1457" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -825,7 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.769231">
           <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -866,7 +846,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/bang_diem_file.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-5.8846154">
           <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="40" />
           <folding />
         </state>
@@ -876,7 +856,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.884615">
           <caret line="94" column="15" selection-start-line="86" selection-start-column="12" selection-end-line="94" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-30.576923">
           <caret line="70" column="52" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6337522">
           <caret line="85" column="97" selection-start-line="85" selection-start-column="97" selection-end-line="85" selection-end-column="97" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,7 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7558348">
           <caret line="68" column="34" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,9 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3662478">
           <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-          <folding>
-            <element signature="e#40#63#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -926,7 +898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6337522">
           <caret line="48" column="60" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -934,7 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6337522">
           <caret line="60" column="96" selection-start-line="60" selection-start-column="96" selection-end-line="60" selection-end-column="96" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -942,7 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6337522">
           <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,7 +925,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LopMonHocController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.5">
+        <state vertical-scroll-proportion="0.0">
           <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
           <folding>
             <element signature="e#40#63#0#PHP" expanded="true" />
@@ -964,10 +933,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/Untitled-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7271095">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#11;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#11;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/lop_mon_hoc/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.037702">
-          <caret line="34" column="130" selection-start-line="34" selection-start-column="130" selection-end-line="34" selection-end-column="130" />
+        <state vertical-scroll-proportion="1.518851">
+          <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
           <folding />
         </state>
       </provider>
