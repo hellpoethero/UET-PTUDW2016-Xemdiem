@@ -42,7 +42,16 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <input style="" type="checkbox" @if($nam_hoc['active']==1)checked @endif>
+                                    <form method="post" action="{{url('/namhoc/'.$nam_hoc['nam_bat_dau'].'/active')}}">
+                                        {!! csrf_field() !!}
+                                        <button style="font-size: 100%" type="submit">
+                                            @if($nam_hoc['active']==1)
+                                                Có
+                                            @else
+                                                Không
+                                            @endif
+                                        </button>
+                                    </form>
                                 </td>
                                 <td>
                                     <div class="deleteButton">
@@ -59,6 +68,7 @@
                         </tbody>
                     </table>
                 </div>
+
             </div>
         </div>
     </div>

@@ -34,6 +34,7 @@ Route::group(['middleware' => 'web'], function () {
         Route::post('/', 'NamHocController@store');
         Route::delete('/{id}', 'NamHocController@destroy');
         Route::get('/{id}', 'NamHocController@show');
+        Route::post('/{id}/active', 'NamHocController@changeActive');
     });
 
     Route::group(['prefix'=>'lopmonhoc'], function() {

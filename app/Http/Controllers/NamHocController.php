@@ -12,14 +12,16 @@ class NamHocController extends Controller
 {
     //hiển thị danh sách năm học
     function index() {
-        $nam_hoc_list = nam_hoc::select('id', 'nam_bat_dau', 'nam_ket_thuc', 'active')->get();
+        $nam_hoc_list = nam_hoc::select('id', 'nam_bat_dau', 'nam_ket_thuc', 'active')
+            ->orderBy('nam_bat_dau')
+            ->get();
         return view('nam_hoc.index')->with('data', $nam_hoc_list);
     }
 
     //hiển thị một năm học
     function show($nam_bat_dau) {
         $this->data['nam_hoc'] = nam_hoc::
-            select('id','nam_bat_dau', 'nam_ket_thuc')
+            select('id','nam_bat_dau', 'nam_ket_thuc','active')
             ->where('nam_bat_dau',$nam_bat_dau)
             ->get()[0];
         $this->data['hoc_ky_nam_hoc'] = hoc_ky_nam_hoc::
@@ -76,5 +78,14 @@ class NamHocController extends Controller
         echo 'window.location="/'.$location.'";';
         echo 'alert("'.$message.'");';
         echo '</script>';
+    }
+
+    function changeActive($nam_bat_dau) {
+        $nam_hoc = nam_hoc::where('nam_bat_dau',$nam_bat_dau)->get()[0];
+        if ($nam_hoc['active'] == 1)
+            nam_hoc::where('nam_bat_dau',$nam_bat_dau)->update(['active' => 0]);
+        else
+            nam_hoc::where('nam_bat_dau',$nam_bat_dau)->update(['active' => 1]);
+        return redirect('/namhoc/');
     }
 }

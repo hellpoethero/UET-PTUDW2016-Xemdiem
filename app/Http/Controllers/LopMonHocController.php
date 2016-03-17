@@ -22,6 +22,7 @@ class LopMonHocController extends Controller
             join('nam_hoc','nam_hoc.id','=','hoc_ky_nam_hoc.nam_hoc_id')
             ->select('hoc_ky_nam_hoc.id','hoc_ky_nam_hoc.name','nam_hoc.nam_bat_dau','nam_hoc.nam_ket_thuc','hoc_ky_nam_hoc.bo_sung')
             ->where('nam_hoc.active',true)
+            ->orderBy('nam_hoc.nam_bat_dau')
             ->get();
         return view('lop_mon_hoc.index')->with('data', $this->data);
     }

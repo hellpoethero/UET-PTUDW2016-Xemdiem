@@ -72,6 +72,7 @@
                                 <select class="form-control" name="user_role_id">
                                     <option value="">Chọn vai trò</option>
                                     <option value=1>Admin</option>
+                                    <option value=2>Cán bộ phòng đào tạo</option>
                                 </select>
                             </div>
                         </div>
